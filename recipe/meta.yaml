@@ -23,10 +23,9 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
   host:
-    - cffi >=1
     - pip
     - python
-    - wheel
+    - setuptools
   run:
     - cffi >=1
     - python

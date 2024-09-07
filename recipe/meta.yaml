@@ -11,7 +11,7 @@ source:
   sha256: a2ea53a4f7c2fcf151ba0f35c8a258771912ba0b4068011bb76aa55a79187941
 
 build:
-  number: 5
+  number: 6
   skip: True  # [py<36]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -21,6 +21,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cffi                                   # [build_platform != target_platform]
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
   host:
     - cffi >=1
     - pip
